@@ -1,0 +1,21 @@
+{
+    "name": "palvoelgyilaszlo/dbconnect",
+    "description": "Use MySQL",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Palvoelgyi\\Dbconnect\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "palvoelgyilaszlo",
+            "email": "l.palvoelgyi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "palvoelgyilaszlo/helper": "^1.0"
+    }
+}
