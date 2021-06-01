@@ -16,8 +16,18 @@
           PASSWORD = ""
           DATABASE = "test"
 
-# functions:
+# use
 
+         require_once __DIR__ . '/vendor/autoload.php';
+
+         use Palvoelgyi\Dbconnect\Globalobjects;
+
+         $db = Globalobjects::getDBConnect();
+
+         var_dump( $db->getTables() );
+
+
+# functions:
 
     [0] => __construct
     [1] => db_query
@@ -48,7 +58,6 @@
                  ->join('useraddress','useraddress.userid = user.id',['land','adrresse'])
                  ->where('user.id > ?','0')
                  ->select('result');
-
 
     [10] => where
 
