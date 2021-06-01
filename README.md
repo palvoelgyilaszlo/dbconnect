@@ -1,5 +1,24 @@
 # dbconnect functions
 
+# use configuration
+
+     Session: 
+
+          $_SESSION['HOST']     = "localhost";
+          $_SESSION['USER']     = "root";
+          $_SESSION['PASSWORD'] = "";
+          $_SESSION['DATABASE'] = "test";
+
+     or .env file
+
+          HOST     = "localhost"
+          USER     = "root"
+          PASSWORD = ""
+          DATABASE = "test"
+
+# functions:
+
+
     [0] => __construct
     [1] => db_query
     [2] => get_table_info

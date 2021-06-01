@@ -16,6 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "palvoelgyilaszlo/helper": "^1.0"
+        "palvoelgyilaszlo/helper": "^1",
+        "symfony/dotenv": "*"
     }
 }

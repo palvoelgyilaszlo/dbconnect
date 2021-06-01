@@ -1,20 +1,24 @@
 <?php
 
-
     declare(strict_types = 1);
 
     namespace Palvoelgyi\Dbconnect;
 
-use Palvoelgyi\Helper\Helper;
+    use Palvoelgyi\Helper\Helper;
+    use Configuration;
 
-class Globalobjects 
+    include_once __DIR__ . "/../config/conf.inc.php";
+
+    class Globalobjects extends Configuration
     {
-
         static private	$instance   = NULL;
         private			$_db        = NULL;
 
         public function __construct(){
-            $this->_db      = new DBConnect('localhost','root','','test');
+
+            parent::__construct();
+
+            $this->_db = new DBConnect( $this->host, $this->user, $this->password, $this->database );
         }
 
         /**
@@ -43,7 +47,7 @@ class Globalobjects
         private			$_db        = NULL;
 
         private function __construct(){
-            $this->_db      = new DBConnect('localhost','web24398854','tdf6hzAu','usr_web24398854_2');
+            $this->_db      = new DBConnect('host','user','password','database');
         }
 
         /**
