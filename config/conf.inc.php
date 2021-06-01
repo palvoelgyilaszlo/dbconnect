@@ -14,6 +14,7 @@
     class Configuration
     {
         private Dotenv $dotenv;
+        private string $url;
         
         /** @var string */
         protected $host;
@@ -23,10 +24,12 @@
 
         public function __construct()
         {
-            if (file_exists('../.env')) {
+            $this->url = __DIR__ . '/../../../../.env';
 
-                 $this->dotenv = new Dotenv();
-                $this->dotenv->load('../.env');
+            if (file_exists( $this->url )) {
+
+                $this->dotenv = new Dotenv();
+                $this->dotenv->load( $this->url );
             }
 
             /** either $_SESSION or .env file or standard setting  */
